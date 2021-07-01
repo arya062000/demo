@@ -1,0 +1,12 @@
+name: learn-github-actions
+on: [push]
+jobs:
+  explore-github-actions:
+    runs-on: macos-latest
+    steps:
+      - run: echo "Hello, I am an Action"
+      - run: echo "This is running on the OS ${{ runner.os }}"
+      - name: Files on this repo 
+        run: |
+           ls ${{ github.workspace}}
+      - run: echo "Bye"
