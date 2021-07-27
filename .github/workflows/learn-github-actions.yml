@@ -6,6 +6,8 @@ jobs:
     steps:
       - run: echo "Hello, I am an Action"
       - run: echo "This is running on the OS ${{ runner.os }}"
+      - run: echo "Stopping"
+      - run: echo "::stop-commands::pause-logging"
       - name: Files on this repo 
         run: |
            ls ${{ github.workspace}}
